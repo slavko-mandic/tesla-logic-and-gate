@@ -92,7 +92,7 @@ boolean isSectionActive(int sect){
 }
 
 boolean isLedActive(int led){
-  boolean currentStep = (led % 3 == step);
+  boolean currentStep = (led % (NUMBER_OF_STEPS-1) == step);
   return (isSectionActive(getLedSection(led)) && currentStep);
 }
 
